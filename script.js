@@ -90,6 +90,11 @@ const formHandleSubmisson = (e) => {
 
 // Adding event listner to search form
 searchForm.addEventListener("submit", formHandleSubmisson);
+inputBox.addEventListener("keyup", (e) => {
+  if (e.key === "Enter") {
+    formHandleSubmisson();
+  }
+});
 
 // resetBtn
 resetBtn.addEventListener("click", () => {
